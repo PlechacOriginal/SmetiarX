@@ -16,9 +16,12 @@ TIME_STEP = 64;
 %  camera = wb_robot_get_device('camera');
 %  wb_camera_enable(camera, TIME_STEP);
 %  motor = wb_robot_get_device('motor');
-motor = wb_robot_get_device('twister');
-wb_motor_set_position(
-wb_motor_set_velocity
+rotational_motor = wb_robot_get_device('twister');
+wb_motor_set_position(rotational_motor, inf);
+
+
+  % Process here sensor data, im
+
 % main loop:
 % perform simulation steps of TIME_STEP milliseconds
 % and leave the loop when Webots signals the termination
@@ -29,7 +32,9 @@ while wb_robot_step(TIME_STEP) ~= -1
   %  rgb = wb_camera_get_image(camera);
 
   % Process here sensor data, images, etc.
-
+    wb_motor_set_velocity(rotational_motor, 2);
+    
+    
   % send actuator commands, e.g.:
   %  wb_motor_set_postion(motor, 10.0);
 
