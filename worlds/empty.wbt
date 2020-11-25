@@ -3,8 +3,13 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
+<<<<<<< Updated upstream
   orientation 0.02431239526364697 -0.9995284098207216 -0.018758075535720647 5.484131445514638
   position 2.9630222015052503 2.047698488089793 13.674000964128616
+=======
+  orientation 0.01399442806196818 -0.9996645945328668 0.02179115464258474 1.6834868852981866
+  position -4.159715859119566 1.2095971950775797 0.008555880072433686
+>>>>>>> Stashed changes
 }
 TexturedBackground {
 }
@@ -19,4 +24,62 @@ UnevenTerrain {
     }
     IBLStrength 100
   }
+  perlinNOctaves -1
 }
+<<<<<<< Updated upstream
+=======
+TinkerbotsBase {
+  hidden position_17_0 1.5700000007241388
+  hidden translation_19 0 0 0
+  hidden rotation_19 0 0 -1 1.5700000007241386
+  translation 0.08373523475000072 1.1400465977583065 0.20884473984703764
+  rotation 0.5890387509505027 -0.5887455014896338 -0.5535450156531005 2.1295411747449364
+  controller "twister_controller"
+  leftSlot TinkerbotsCube {
+    upSlot TinkerbotsCube {
+      upSlot TinkerbotsCube {
+        leftSlot TinkerbotsCube {
+          upSlot TinkerbotsCube {
+            upSlot TinkerbotsCube {
+              upSlot TinkerbotsCube {
+              }
+            }
+          }
+        }
+        rightSlot TinkerbotsCube {
+          upSlot TinkerbotsCube {
+            upSlot TinkerbotsCube {
+              upSlot TinkerbotsCube {
+              }
+            }
+          }
+        }
+        frontSlot TinkerbotsCube {
+          upSlot TinkerbotsCube {
+            upSlot TinkerbotsCube {
+              upSlot TinkerbotsCube {
+              }
+            }
+          }
+        }
+        backSlot TinkerbotsCube {
+        }
+      }
+    }
+  }
+  rightSlot TinkerbotsTwister {
+    rotation 0.5773502691896258 0.5773502691896258 0.5773502691896258 0
+    BSlot TinkerbotsCubieMaleCube {
+      leftSlot TinkerbotsCubieMaleCube {
+      }
+    }
+  }
+}
+ConveyorBelt {
+  hidden translation_1 0 0.07498431953667217 0
+  hidden rotation_1 -1 0 0 3.1415926535897927
+  translation 0 1.01 0
+  rotation 0 1 0 4.692820414042842e-06
+  size 1.5 0 0.2
+}
+>>>>>>> Stashed changes
