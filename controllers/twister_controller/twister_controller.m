@@ -18,7 +18,7 @@ TIME_STEP = 64;
 %  motor = wb_robot_get_device('motor');
 rotational_motor = wb_robot_get_device('twister');
 wb_motor_set_position(rotational_motor, inf);
-
+wb_position_sensor_enable;
 
   % Process here sensor data, im
 
@@ -32,7 +32,10 @@ while wb_robot_step(TIME_STEP) ~= -1
   %  rgb = wb_camera_get_image(camera);
 
   % Process here sensor data, images, etc.
-    wb_motor_set_velocity(rotational_motor, 2);
+    wb_motor_set_velocity(rotational_motor, 0.5);
+    if mod(wb_position_sensor_get_value, 3) == 0
+      wb_motor_set_velocity(rotational_motor, -0.5);
+    end 
     
     
   % send actuator commands, e.g.:

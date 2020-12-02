@@ -3,8 +3,8 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation 0.00043637364999780183 0.9998334395124571 0.018245624426898706 2.850540276036425
-  position 0.07143136499051554 0.6811903453951247 -0.19721720113824678
+  orientation -0.15416653081406667 -0.9265786103916769 -0.34305212365088866 2.370150645519739
+  position -0.18129419771630273 1.4463188814547747 -0.013842156252753358
 }
 TexturedBackground {
 }
@@ -19,11 +19,59 @@ UnevenTerrain {
     }
     IBLStrength 100
   }
+  perlinNOctaves -1
 }
 TinkerbotsBase {
-  translation -0.0007787645979754934 0.6771047671882402 0.0012849020952437438
-  rotation 0.7993084255067968 -0.37001892526032965 0.47348921409366446 0.01953218644989656
-  backSlot TinkerbotsTwister {
-    rotation 0.5773502691896258 0.5773502691896258 0.5773502691896258 0
+  hidden position_17_0 1.5700000000004173
+  hidden rotation_19 0 0 -1 1.570000000000417
+  translation 0.08373514895776941 1.1400478468272004 0.20884480504543088
+  rotation 0.5890390699203494 -0.5887452044837045 -0.5535449921233238 2.129541107564206
+  controller "twister_controller"
+  leftSlot TinkerbotsCube {
+    upSlot TinkerbotsCube {
+      upSlot TinkerbotsCube {
+        leftSlot TinkerbotsCube {
+          upSlot TinkerbotsCube {
+            upSlot TinkerbotsCube {
+              upSlot TinkerbotsCube {
+              }
+            }
+          }
+        }
+        rightSlot TinkerbotsCube {
+          upSlot TinkerbotsCube {
+            upSlot TinkerbotsCube {
+              upSlot TinkerbotsCube {
+              }
+            }
+          }
+        }
+        frontSlot TinkerbotsCube {
+          upSlot TinkerbotsCube {
+            upSlot TinkerbotsCube {
+              upSlot TinkerbotsCube {
+              }
+            }
+          }
+        }
+        backSlot TinkerbotsCube {
+        }
+      }
+    }
   }
+  rightSlot TinkerbotsTwister {
+    rotation 0.5773502691896258 0.5773502691896258 0.5773502691896258 0
+    BSlot TinkerbotsCubieMaleCube {
+      leftSlot TinkerbotsCubieMaleCube {
+      }
+    }
+  }
+}
+ConveyorBelt {
+  hidden translation_1 0 0.07496863907334439 0
+  hidden rotation_1 -1 0 0 3.1415926535897922
+  translation 2.11 1 -0.02
+  size 7 0.1 0.3
+  borderThickness 1e-06
+  borderHeight 1e-06
 }
