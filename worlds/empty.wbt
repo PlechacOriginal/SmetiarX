@@ -3,18 +3,8 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-  orientation 0.02431239526364697 -0.9995284098207216 -0.018758075535720647 5.484131445514638
-  position 2.9630222015052503 2.047698488089793 13.674000964128616
-=======
-  orientation 0.01399442806196818 -0.9996645945328668 0.02179115464258474 1.6834868852981866
-  position -4.159715859119566 1.2095971950775797 0.008555880072433686
->>>>>>> Stashed changes
-=======
   orientation 0.8889739610208838 -0.4569461051555172 -0.030422912583173173 5.618982327669382
   position -0.6226279410318922 6.300585201858725 13.16230053626699
->>>>>>> Stashed changes
 }
 TexturedBackground {
 }
@@ -31,28 +21,17 @@ UnevenTerrain {
   }
   perlinNOctaves -1
 }
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
-TinkerbotsBase {
-  hidden position_17_0 1.5700000007241388
-  hidden translation_19 0 0 0
-  hidden rotation_19 0 0 -1 1.5700000007241386
-  translation 0.08373523475000072 1.1400465977583065 0.20884473984703764
-  rotation 0.5890387509505027 -0.5887455014896338 -0.5535450156531005 2.1295411747449364
-=======
 ConveyorBelt {
   translation -4.88 1 -0.02
   name "conveyor belt(1)"
   size 7 0.1 0.3
   borderThickness 1e-06
   borderHeight 1e-06
-  speed 0.2
+  speed 0.18
 }
 TinkerbotsBase {
   translation 0.12263410492175178 1.1400478481278595 0.2122780305112203
   rotation 0.580600393666663 -0.5802903416079767 -0.5711097112732489 2.1028689505803295
->>>>>>> Stashed changes
   controller "twister_controller"
   leftSlot TinkerbotsCube {
     upSlot TinkerbotsCube {
@@ -95,15 +74,6 @@ TinkerbotsBase {
   }
 }
 ConveyorBelt {
-<<<<<<< Updated upstream
-  hidden translation_1 0 0.07498431953667217 0
-  hidden rotation_1 -1 0 0 3.1415926535897927
-  translation 0 1.01 0
-  rotation 0 1 0 4.692820414042842e-06
-  size 1.5 0 0.2
-}
->>>>>>> Stashed changes
-=======
   translation 2.11 0.99 -0.02
   size 7 0.1 0.3
   borderThickness 1e-06
@@ -151,4 +121,3 @@ WaterBottle {
   rotation 0.016730844998593283 0.00019468719983151985 0.9998600106627564 3.367125969817105e-05
   name "water bottle(1)"
 }
->>>>>>> Stashed changes
