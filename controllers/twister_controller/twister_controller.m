@@ -12,12 +12,10 @@
 
 TIME_STEP = 64;
 
-% get and enable devices, e.g.:
-%  camera = wb_robot_get_device('camera');
-%  wb_camera_enable(camera, TIME_STEP);
-%  motor = wb_robot_get_device('motor');
+
 rotational_motor = wb_robot_get_device('twister');
 wb_motor_set_position(rotational_motor, inf);
+<<<<<<< Updated upstream
 wb_position_sensor_enable;
 
   % Process here sensor data, im
@@ -37,11 +35,17 @@ while wb_robot_step(TIME_STEP) ~= -1
       wb_motor_set_velocity(rotational_motor, -0.5);
     end 
     
-    
-  % send actuator commands, e.g.:
-  %  wb_motor_set_postion(motor, 10.0);
+=======
+twister_pos = wb_motor_get_position_sensor(rotational_motor);
+wb_position_sensor_enable(twister_pos, TIME_STEP);
 
-  % if your code plots some graphics, it needs to flushed like this:
+while wb_robot_step(TIME_STEP) ~= -1
+
+  
+    wb_motor_set_velocity(rotational_motor, 0.1);
+    %value = wb_position_sensor_get_value(rotational_motor)
+>>>>>>> Stashed changes
+    
   drawnow;
 
 end
