@@ -7,44 +7,25 @@
 
 % uncomment the next two lines if you want to use
 % MATLAB's desktop to interact with the controller:
-desktop;
+%desktop;
 %keyboard;
 
 TIME_STEP = 64;
 
-% get and enable devices, e.g.:
-%  camera = wb_robot_get_device('camera');
-%  wb_camera_enable(camera, TIME_STEP);
-%  motor = wb_robot_get_device('motor');
+
 rotational_motor = wb_robot_get_device('twister');
-wb_motor_set_position(rotational_motor, inf);
-%wb_position_sensor_sampling_period = 100;
-%wb_position_sensor_enable(twister_sensor);
-
-%wb_position_sensor_enable(PositionSensor);
-  % Process here sensor data, im
+  wb_motor_set_position(rotational_motor, inf);
+twister_pos = wb_motor_get_position_sensor(twister);
+  wb_position_sensor_enable(twister_pos, TIME_STEP);
 
 
-% perform simulation steps of TIME_STEP milliseconds
-% and leave the loop when Webots signals the termination
-%
 while wb_robot_step(TIME_STEP) ~= -1
 
-  % read the sensors, e.g.:
-  %  rgb = wb_camera_get_image(camera);
+ 
+wb_motor_set_velocity(rotational_motor, 0.5);
+value = wb_position_sensor_get_value(twister_pos);    
 
-  % Process here sensor data, images, etc.
-    wb_motor_set_velocity(rotational_motor, 0.1);
-    %value = wb_position_sensor_get_value(PositionSensor)
-   % if mod(value, 3) == 0
-      %wb_motor_set_velocity(rotational_motor, -0.1);
-    %end 
-    %value = wb_position_sensor_get_value(twister_sensor)
     
-  % send actuator commands, e.g.:
-  %  wb_motor_set_postion(motor, 10.0);
-
-  % if your code plots some graphics, it needs to flushed like this:
   drawnow;
 
 end
