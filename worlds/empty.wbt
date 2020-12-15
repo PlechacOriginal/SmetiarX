@@ -3,8 +3,8 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation 0.2511516051194562 -0.9548944827938111 -0.15842789519482017 4.771066497481547
-  position 2.02832600239409 1.8288580221144133 0.17889172726061264
+  orientation 0.48762980052655147 -0.8699440930830796 -0.07358296370963666 5.516648898608639
+  position 1.342562708362495 1.7095342723922295 2.4422192211374947
 }
 TexturedBackground {
 }
@@ -28,70 +28,6 @@ ConveyorBelt {
   borderThickness 1e-06
   borderHeight 1e-06
   speed 0.18
-}
-TinkerbotsBase {
-  translation 0.123616 1.09005 0.152299
-  rotation 0.580600393666663 -0.5802903416079767 -0.5711097112732489 2.1028689505803295
-  controller "twister_controller"
-  leftSlot TinkerbotsCube {
-    upSlot TinkerbotsCube {
-      upSlot TinkerbotsCube {
-        leftSlot TinkerbotsCube {
-          upSlot TinkerbotsCube {
-            upSlot TinkerbotsCube {
-              upSlot TinkerbotsCube {
-              }
-            }
-          }
-        }
-        rightSlot TinkerbotsCube {
-          upSlot TinkerbotsCube {
-            upSlot TinkerbotsCube {
-              upSlot TinkerbotsCube {
-              }
-            }
-          }
-        }
-        frontSlot TinkerbotsCube {
-          upSlot TinkerbotsCube {
-            upSlot TinkerbotsCube {
-              upSlot TinkerbotsCube {
-              }
-            }
-          }
-        }
-        backSlot TinkerbotsCube {
-        }
-      }
-    }
-  }
-  rightSlot TinkerbotsTwister {
-    rotation 0.5773502691896258 0.5773502691896258 0.5773502691896258 0
-    ASlot TinkerbotsCubieMaleCube {
-      frontSlot TinkerbotsCubieMaleCube {
-        upSlot TinkerbotsCubieMaleCube {
-          upSlot TinkerbotsCubieMaleCube {
-            upSlot TinkerbotsCubieMaleCube {
-              upSlot TinkerbotsCubieMaleCube {
-                upSlot TinkerbotsCubieMaleCube {
-                  upSlot TinkerbotsCubieMaleCube {
-                    upSlot TinkerbotsCubieMaleCube {
-                      upSlot TinkerbotsCubieMaleCube {
-                        upSlot TinkerbotsCubieMaleCube {
-                          upSlot TinkerbotsCubieMaleCube {
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
 }
 ConveyorBelt {
   translation 2.11 0.99 -0.02
