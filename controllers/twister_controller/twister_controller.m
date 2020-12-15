@@ -15,7 +15,7 @@ TIME_STEP = 64;
 
 rotational_motor = wb_robot_get_device('twister');
   wb_motor_set_position(rotational_motor, inf);
-twister_pos = wb_motor_get_position_sensor(twister);
+twister_pos = wb_motor_get_position_sensor(rotational motor);
   wb_position_sensor_enable(twister_pos, TIME_STEP);
 
 
@@ -23,7 +23,7 @@ while wb_robot_step(TIME_STEP) ~= -1
 
  
 wb_motor_set_velocity(rotational_motor, 0.5);
-value = wb_position_sensor_get_value(twister_pos);    
+value = wb_position_sensor_get_value(twister_pos)   
 
     
   drawnow;
