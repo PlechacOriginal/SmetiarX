@@ -3,8 +3,8 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation 0.8889739610208838 -0.4569461051555172 -0.030422912583173173 5.618982327669382
-  position -0.6226279410318922 6.300585201858725 13.16230053626699
+  orientation 0.2511516051194562 -0.9548944827938111 -0.15842789519482017 4.771066497481547
+  position 2.02832600239409 1.8288580221144133 0.17889172726061264
 }
 TexturedBackground {
 }
@@ -30,7 +30,7 @@ ConveyorBelt {
   speed 0.18
 }
 TinkerbotsBase {
-  translation 0.12263410492175178 1.1400478481278595 0.2122780305112203
+  translation 0.123616 1.09005 0.152299
   rotation 0.580600393666663 -0.5802903416079767 -0.5711097112732489 2.1028689505803295
   controller "twister_controller"
   leftSlot TinkerbotsCube {
@@ -67,8 +67,28 @@ TinkerbotsBase {
   }
   rightSlot TinkerbotsTwister {
     rotation 0.5773502691896258 0.5773502691896258 0.5773502691896258 0
-    BSlot TinkerbotsCubieMaleCube {
-      leftSlot TinkerbotsCubieMaleCube {
+    ASlot TinkerbotsCubieMaleCube {
+      frontSlot TinkerbotsCubieMaleCube {
+        upSlot TinkerbotsCubieMaleCube {
+          upSlot TinkerbotsCubieMaleCube {
+            upSlot TinkerbotsCubieMaleCube {
+              upSlot TinkerbotsCubieMaleCube {
+                upSlot TinkerbotsCubieMaleCube {
+                  upSlot TinkerbotsCubieMaleCube {
+                    upSlot TinkerbotsCubieMaleCube {
+                      upSlot TinkerbotsCubieMaleCube {
+                        upSlot TinkerbotsCubieMaleCube {
+                          upSlot TinkerbotsCubieMaleCube {
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
       }
     }
   }
