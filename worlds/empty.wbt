@@ -3,8 +3,8 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation 0.9012695581945297 -0.4302395665364403 -0.051059757719492296 6.021335498501205
-  position -0.4262799887170636 2.392713098711315 2.4491117662710815
+  orientation -0.146432389795341 0.9820326291790524 0.11903558479086378 1.3829011847855135
+  position 1.5499782653885597 1.935528215706573 -0.05382084459408169
 }
 TexturedBackground {
 }
@@ -22,6 +22,24 @@ UnevenTerrain {
   }
   perlinNOctaves -1
 }
+TinkerbotsBase {
+  translation -0.72 1.55 -0.02
+  name "Tinkerbots(1)"
+  controller "kamera_controller"
+  leftSlot TinkerbotsCube {
+  }
+  rightSlot TinkerbotsCube {
+  }
+  backSlot TinkerbotsCube {
+  }
+  extensionSlot [
+    Camera {
+      translation 0 -0.05 5.09809e-08
+      rotation 1 0 0 -1.5707953071795862
+      fieldOfView 0.65
+    }
+  ]
+}
 Wall {
   translation -0.69 1.52 0.27
   rotation 1 0 0 -1.5707953071795862
@@ -29,7 +47,7 @@ Wall {
   size 0.005 0.6 0.01
 }
 Wall {
-  translation -0.74 1.52 0.27
+  translation -0.75 1.52 0.27
   rotation 1 0 0 -1.5707953071795862
   name "wall(3)"
   size 0.005 0.6 0.01
@@ -96,7 +114,6 @@ WaterBottle {
   name "water bottle(1)"
 }
 TinkerbotsBase {
-  hidden rotation_14 0 0 -1 0.3199996980643695
   translation -0.0002855693391090111 1.1100357894611252 0.16118807490195464
   rotation 3.4562128428743055e-05 0.0030203553900811043 -0.9999954381189831 1.572817288498095
   controller "twister_controller"
