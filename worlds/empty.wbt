@@ -3,18 +3,8 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-  orientation -0.15416653081406667 -0.9265786103916769 -0.34305212365088866 2.370150645519739
-  position -0.18129419771630273 1.4463188814547747 -0.013842156252753358
-=======
-  orientation 0.8889739610208838 -0.4569461051555172 -0.030422912583173173 5.618982327669382
-  position 1.0349780972495808 2.8303567318432123 2.8623358597272506
->>>>>>> Stashed changes
-=======
-  orientation 0.8889739610208838 -0.4569461051555172 -0.030422912583173173 5.618982327669382
-  position -0.6226279410318922 6.300585201858725 13.16230053626699
->>>>>>> world
+  orientation 0.900669143670865 -0.4124490813080018 0.13667790226432405 5.940191296777393
+  position 1.0965027756449817 3.2159226244563484 10.113139907523976
 }
 TexturedBackground {
 }
@@ -31,13 +21,6 @@ UnevenTerrain {
   }
   perlinNOctaves -1
 }
-<<<<<<< HEAD
-TinkerbotsBase {
-  hidden position_17_0 1.5700000000004173
-  hidden rotation_19 0 0 -1 1.570000000000417
-  translation 0.08373514895776941 1.1400478468272004 0.20884480504543088
-  rotation 0.5890390699203494 -0.5887452044837045 -0.5535449921233238 2.129541107564206
-=======
 ConveyorBelt {
   translation -4.88 1 -0.02
   name "conveyor belt(1)"
@@ -49,7 +32,6 @@ ConveyorBelt {
 TinkerbotsBase {
   translation 0.12263410492175178 1.1400478481278595 0.2122780305112203
   rotation 0.580600393666663 -0.5802903416079767 -0.5711097112732489 2.1028689505803295
->>>>>>> world
   controller "twister_controller"
   leftSlot TinkerbotsCube {
     upSlot TinkerbotsCube {
@@ -92,14 +74,6 @@ TinkerbotsBase {
   }
 }
 ConveyorBelt {
-<<<<<<< HEAD
-  hidden translation_1 0 0.07496863907334439 0
-  hidden rotation_1 -1 0 0 3.1415926535897922
-  translation 2.11 1 -0.02
-  size 7 0.1 0.3
-  borderThickness 1e-06
-  borderHeight 1e-06
-=======
   translation 2.11 0.99 -0.02
   size 7 0.1 0.3
   borderThickness 1e-06
@@ -146,5 +120,4 @@ WaterBottle {
   translation -8.22027 1.09771 4.25168e-08
   rotation 0.016730844998593283 0.00019468719983151985 0.9998600106627564 3.367125969817105e-05
   name "water bottle(1)"
->>>>>>> world
 }
