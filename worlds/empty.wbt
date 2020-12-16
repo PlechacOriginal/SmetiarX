@@ -3,14 +3,15 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation 0.900669143670865 -0.4124490813080018 0.13667790226432405 5.940191296777393
-  position 1.0965027756449817 3.2159226244563484 10.113139907523976
+  orientation -0.146432389795341 0.9820326291790524 0.11903558479086378 1.3829011847855135
+  position 1.5499782653885597 1.935528215706573 -0.05382084459408169
 }
 TexturedBackground {
 }
 TexturedBackgroundLight {
 }
 UnevenTerrain {
+  translation 0 0.01 0
   size 50 1 50
   appearance SandyGround {
     colorOverride 0 0 0
@@ -21,6 +22,41 @@ UnevenTerrain {
   }
   perlinNOctaves -1
 }
+TinkerbotsBase {
+  translation -0.72 1.55 -0.02
+  name "Tinkerbots(1)"
+  controller "kamera_controller"
+  leftSlot TinkerbotsCube {
+  }
+  rightSlot TinkerbotsCube {
+  }
+  backSlot TinkerbotsCube {
+  }
+  extensionSlot [
+    Camera {
+      translation 0 -0.05 5.09809e-08
+      rotation 1 0 0 -1.5707953071795862
+      fieldOfView 0.65
+    }
+  ]
+}
+Wall {
+  translation -0.69 1.52 0.27
+  rotation 1 0 0 -1.5707953071795862
+  name "wall(2)"
+  size 0.005 0.6 0.01
+}
+Wall {
+  translation -0.75 1.52 0.27
+  rotation 1 0 0 -1.5707953071795862
+  name "wall(3)"
+  size 0.005 0.6 0.01
+}
+Wall {
+  translation -0.72 1.01 -0.28
+  name "wall(1)"
+  size 0.1 0.5 0.01
+}
 ConveyorBelt {
   translation -4.88 1 -0.02
   name "conveyor belt(1)"
@@ -29,50 +65,6 @@ ConveyorBelt {
   borderHeight 1e-06
   speed 0.18
 }
-TinkerbotsBase {
-  translation 0.12263410492175178 1.1400478481278595 0.2122780305112203
-  rotation 0.580600393666663 -0.5802903416079767 -0.5711097112732489 2.1028689505803295
-  controller "twister_controller"
-  leftSlot TinkerbotsCube {
-    upSlot TinkerbotsCube {
-      upSlot TinkerbotsCube {
-        leftSlot TinkerbotsCube {
-          upSlot TinkerbotsCube {
-            upSlot TinkerbotsCube {
-              upSlot TinkerbotsCube {
-              }
-            }
-          }
-        }
-        rightSlot TinkerbotsCube {
-          upSlot TinkerbotsCube {
-            upSlot TinkerbotsCube {
-              upSlot TinkerbotsCube {
-              }
-            }
-          }
-        }
-        frontSlot TinkerbotsCube {
-          upSlot TinkerbotsCube {
-            upSlot TinkerbotsCube {
-              upSlot TinkerbotsCube {
-              }
-            }
-          }
-        }
-        backSlot TinkerbotsCube {
-        }
-      }
-    }
-  }
-  rightSlot TinkerbotsTwister {
-    rotation 0.5773502691896258 0.5773502691896258 0.5773502691896258 0
-    BSlot TinkerbotsCubieMaleCube {
-      leftSlot TinkerbotsCubieMaleCube {
-      }
-    }
-  }
-}
 ConveyorBelt {
   translation 2.11 0.99 -0.02
   size 7 0.1 0.3
@@ -80,44 +72,77 @@ ConveyorBelt {
   borderHeight 1e-06
 }
 BeerBottle {
-  translation -5.17031 1.10036 -2.40498e-07
-  rotation -0.016733979247487457 0.0011951296988904452 -0.999859262898308 -3.3293513380435915e-05
+  translation -5.1530738468359845 1.1004081029928399 -2.616951296693298e-07
+  rotation 0.0005180487208877316 -0.00011777911054514948 -0.9999998588767921 0.0019851373278642523
 }
 BeerBottle {
-  translation -1.48031 1.10037 -9.3636e-08
-  rotation -0.016733979247487457 0.0011951296988904452 -0.999859262898308 -3.3293513380435915e-05
+  translation -1.4630740303698075 1.1004813626082892 6.313770593606286e-07
+  rotation 0.0013639957149351163 -0.0001575013974653935 -0.9999990573540555 0.0015378817908634976
   name "beer bottle(1)"
 }
 Can {
-  translation -5.947093465095557 1.1609531603375205 8.84542082709819e-08
-  rotation 0.016734947390742008 0.0004663491441873519 0.9998598522064504 3.306180316658606e-05
+  translation -5.929851066393692 1.1609822592523527 -4.42982798280062e-08
+  rotation -0.0060621169317031775 0.0008684972661166306 0.9999812480495847 -0.00021217412871393505
 }
 Can {
-  translation -2.19709 1.16095 3.0668e-08
-  rotation 0.016734947390742008 0.0004663491441873519 0.9998598522064504 3.306180316658606e-05
+  translation -2.179851867485896 1.1610691098678774 6.521656928136939e-07
+  rotation -0.008911433623810089 0.0012968955056011158 0.999959451384313 -0.00014234003270539072
   name "can(2)"
 }
 Can {
-  translation -7.46709 1.16095 1.1187e-07
-  rotation 0.016734947390742008 0.0004663491441873519 0.9998598522064504 3.306180316658606e-05
+  translation -7.449853000200853 1.1609469694802403 -3.261933117228727e-07
+  rotation -0.010508111866067246 0.0014889374065531356 0.999943679739219 -0.00012372775626128462
   name "can(1)"
 }
 WaterBottle {
-  translation -6.65027 1.09771 3.22328e-08
-  rotation 0.016730844998593283 0.00019468719983151985 0.9998600106627564 3.367125969817105e-05
+  translation -6.633035278574507 1.0979163295290943 -2.876022826433333e-07
+  rotation 0.0006971770734813709 -0.00014842010165643774 0.9999997459577685 0.0013140839438623621
 }
 WaterBottle {
-  translation -4.35027 1.09776 1.71769e-08
-  rotation 0.016730844998593283 0.00019468719983151985 0.9998600106627564 3.367125969817105e-05
+  translation -4.333041134434709 1.0978819715048187 1.6152604448667497e-07
+  rotation -0.00029753605966532964 0.0001100273894659175 0.9999999496831321 -0.0017980532871518286
   name "water bottle(2)"
 }
 WaterBottle {
-  translation -3.33027 1.09777 1.05006e-08
-  rotation 0.016730844998593283 0.00019468719983151985 0.9998600106627564 3.367125969817105e-05
+  translation -3.3130435045049755 1.0978579796576995 3.6058845589675916e-07
+  rotation -0.00013214550768411926 6.346476984538183e-05 0.999999989254894 -0.0031275412878295763
   name "water bottle(3)"
 }
 WaterBottle {
-  translation -8.22027 1.09771 4.25168e-08
-  rotation 0.016730844998593283 0.00019468719983151985 0.9998600106627564 3.367125969817105e-05
+  translation -8.203033315023085 1.0979094237416405 -5.939682836566741e-07
+  rotation 0.0004668702623779549 -8.348902352215063e-05 0.9999998875308642 0.002376336515267434
   name "water bottle(1)"
+}
+TinkerbotsBase {
+  translation -0.0002855693391090111 1.1100357894611252 0.16118807490195464
+  rotation 3.4562128428743055e-05 0.0030203553900811043 -0.9999954381189831 1.572817288498095
+  controller "twister_controller"
+  leftSlot TinkerbotsCube {
+    upSlot TinkerbotsCube {
+      rightSlot TinkerbotsCube {
+        upSlot TinkerbotsCube {
+          upSlot TinkerbotsCube {
+            upSlot TinkerbotsCube {
+            }
+          }
+        }
+      }
+      frontSlot TinkerbotsCube {
+        upSlot TinkerbotsCube {
+          upSlot TinkerbotsCube {
+            upSlot TinkerbotsCube {
+            }
+          }
+        }
+      }
+      backSlot TinkerbotsCube {
+      }
+    }
+  }
+  rightSlot TinkerbotsTwister {
+  }
+}
+Wall {
+  translation -0.72 1.01 0.22
+  size 0.1 0.5 0.01
 }

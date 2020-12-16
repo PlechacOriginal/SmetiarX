@@ -21,7 +21,7 @@ twister_pos = wb_motor_get_position_sensor(rotational_motor);
 
 while wb_robot_step(TIME_STEP) ~= -1
 
-wb_motor_set_velocity(rotational_motor, 0.5);
+wb_motor_set_velocity(rotational_motor, -0.5);
 value = wb_position_sensor_get_value(twister_pos)   
 
     
