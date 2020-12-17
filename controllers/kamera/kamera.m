@@ -17,8 +17,9 @@ TIME_STEP = 64;
 camera = wb_robot_get_device('camera');
 wb_camera_enable(camera, 5);
 
+emitter = wb_robot_get_device('emitter');
+wb_emitter_set_channel(emitter, 1);
 
-  
 
 figure('Name','Feed z triediacej kamery','NumberTitle','off');
 % main loop:
@@ -110,25 +111,29 @@ cierne_sklo = length(find(~BW_sklo));
 
 
 %rozhodnutie o materiali
-    if biele_plast > biele_sklo && biele_plast > biele_plech
-        x = 1
+    if biele_plast > 600
+        x = 1;
         disp("material: plast");
               
-    elseif biele_plech > biele_sklo && biele_plech > biele_plast
-        x = 2
+    elseif biele_plech > 200
+        x = 2;
         disp("material: plech");
         
-    elseif biele_sklo > biele_plast && biele_sklo > biele_plech
-        x = 3
+    elseif biele_sklo > 200
+        x = 3;
         disp("material: sklo");
         
     else
-        x = 0
+        x = 0;
         disp("unable to recognize given material");
         
     end
-  
-  
+ 
+ 
+  %emitter
+  var = x;
+  wb_emitter_send(emitter,  var);
+
 
 %zobrazenie feedu kamery v okne
 %rgb

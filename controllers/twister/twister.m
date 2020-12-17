@@ -12,20 +12,36 @@ desktop;
 %keyboard;
 
 TIME_STEP = 64;
+A = [];
 
 
 rotational_motor = wb_robot_get_device('twister');
   wb_motor_set_position(rotational_motor, inf);
 twister_pos = wb_motor_get_position_sensor(rotational_motor);
   wb_position_sensor_enable(twister_pos, TIME_STEP);
+ 
+ %zapnutie receivera 
+  receiver = wb_robot_get_device('receiver');
+  wb_receiver_enable(receiver, TIME_STEP);
 
 
 while wb_robot_step(TIME_STEP) ~= -1
-m = getGlobalx
-  value = wb_position_sensor_get_value(twister_pos) 
+
+ 
+  %reciever
+while wb_receiver_get_queue_length(receiver) > 0
+        pointer = wb_receiver_get_data(receiver);
+        setdatatype(pointer, 'doublePtr', 1, 1);
+        A = get(pointer, 'Value');
+        wb_receiver_next_packet(receiver);
+    end
+  
+  disp(A)
+  
+  value = wb_position_sensor_get_value(twister_pos)
 
     
-    if m == 1
+    if A == 1
       if value < 0.732
         wb_motor_set_velocity(rotational_motor, 1);
       
@@ -38,7 +54,7 @@ m = getGlobalx
         wb_motor_set_velocity(rotational_motor, 0);
       end
     
-   elseif m == 2
+   elseif A == 2
       if value < 1.932
         wb_motor_set_velocity(rotational_motor, 1);
       
@@ -52,7 +68,7 @@ m = getGlobalx
       end
     
     
-   elseif m == 3
+   elseif A == 3
       if value < 0
         wb_motor_set_velocity(rotational_motor, 1);
       
