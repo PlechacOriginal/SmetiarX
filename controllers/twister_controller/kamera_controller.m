@@ -8,14 +8,17 @@
 % uncomment the next two lines if you want to use
 % MATLAB's desktop to interact with the controller:
 desktop;
-keyboard;
+%keyboard;
 
 TIME_STEP = 64;
-material = 0;
+
 
 % get and enable devices, e.g.:
 camera = wb_robot_get_device('camera');
 wb_camera_enable(camera, 5);
+
+
+  
 
 figure('Name','Feed z triediacej kamery','NumberTitle','off');
 % main loop:
@@ -108,21 +111,24 @@ cierne_sklo = length(find(~BW_sklo));
 
 %rozhodnutie o materiali
     if biele_plast > biele_sklo && biele_plast > biele_plech
-        material = 1;
-        disp("material: plast")
+        x = 1
+        disp("material: plast");
               
     elseif biele_plech > biele_sklo && biele_plech > biele_plast
-        material = 2;
-        disp("material: plech")
+        x = 2
+        disp("material: plech");
         
     elseif biele_sklo > biele_plast && biele_sklo > biele_plech
-        material = 3;
-        disp("material: sklo")
+        x = 3
+        disp("material: sklo");
         
     else
-        disp("unable to recognize given material")
+        x = 0
+        disp("unable to recognize given material");
         
     end
+  
+  
 
 %zobrazenie feedu kamery v okne
 %rgb
