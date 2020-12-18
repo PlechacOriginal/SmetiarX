@@ -11,6 +11,7 @@ desktop;
 %keyboard;
 
 TIME_STEP = 64;
+x = 0;
 
 
 % get and enable devices, e.g.:
@@ -124,7 +125,7 @@ cierne_sklo = length(find(~BW_sklo));
         disp("material: sklo");
         
     else
-        x = 0;
+        x = x;
         disp("unable to recognize given material");
         
     end

@@ -3,8 +3,8 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation -0.051429750575052204 -0.9974595298155217 0.04928962503393799 4.752337844316315
-  position 2.129573159998529 1.3835226014477662 -0.040743002801005464
+  orientation -0.03357548793178924 0.8885054755350594 0.45763599787861997 3.0114024732739426
+  position 1.5307856294638023 5.220657949081285 -3.5953614786814443
 }
 TexturedBackground {
 }
@@ -67,16 +67,17 @@ ConveyorBelt {
   size 7 0.1 0.2
   borderThickness 1e-06
   borderHeight 1e-06
-  speed 0.3
+  speed 0.25
 }
 ConveyorBelt {
-  translation 2.11 0.99 -0.02
-  size 7 0.1 0.2
+  translation 0.12 0.99 -0.02
+  size 3 0.1 0.15
   borderThickness 1e-06
   borderHeight 1e-06
+  speed 0.3
 }
 BeerBottle {
-  translation -5.1530738468359845 1.0903626629928398 -2.6169512966933e-07
+  translation -5.12307 1.0903 -2.54711e-07
   rotation 0.0005180487208877317 -0.00011777911054514949 -0.9999998588767921 0.001985137327864252
   mass 0.04
 }
@@ -87,24 +88,24 @@ BeerBottle {
   mass 0.04
 }
 Can {
-  translation -5.929851066393692 1.1509368192523526 -4.42982798280062e-08
+  translation -5.84985 1.15093 -0.03
   rotation -0.0060621169317031775 0.0008684972661166303 0.9999812480495847 -0.00021217412871393505
   mass 0.035
 }
 Can {
-  translation -2.179851867485896 1.1510236698678773 6.521656928136939e-07
+  translation -2.22985 1.15103 -0.0299994
   rotation -0.008911433623810089 0.001296895505601116 0.999959451384313 -0.00014234003270539075
   name "can(2)"
   mass 0.035
 }
 Can {
-  translation -7.449853000200853 1.1509015294802403 -3.261933117228727e-07
+  translation -7.53985 1.1509 -0.0300003
   rotation -0.010508111866067244 0.0014889374065531356 0.9999436797392189 -0.00012372775626128465
   name "can(1)"
   mass 0.035
 }
 WaterBottle {
-  translation -6.633035278574507 1.0878708895290945 -2.876022826433332e-07
+  translation -6.77304 1.08773 -3.14987e-07
   rotation 0.0006971770734813709 -0.00014842010165643774 0.9999997459577685 0.0013140839438623621
   mass 0.05
 }
@@ -121,10 +122,69 @@ WaterBottle {
   mass 0.05
 }
 WaterBottle {
-  translation -8.203033315023085 1.0878639837416406 -5.939682836566741e-07
+  translation -8.32303 1.08762 -6.17932e-07
   rotation 0.00046687026237795485 -8.348902352215063e-05 0.9999998875308641 0.0023763365152674343
   name "water bottle(1)"
   mass 0.05
+}
+Wall {
+  translation -0.14 1.02 -0.49
+  name "wall(4)"
+  size 0.1 0.1 0.7
+}
+Wall {
+  translation 0.47 1.02 -0.49
+  name "wall(12)"
+  size 0.1 0.1 0.7
+}
+Wall {
+  translation -0.14 1.03 -1.08
+  name "wall(5)"
+  size 0.1 0.5 0.48
+}
+Wall {
+  translation 0.47 1.03 -1.15
+  name "wall(13)"
+  size 0.1 0.5 0.63
+}
+Wall {
+  translation -0.02 1.03 1.1
+  name "wall(6)"
+  size 0.1 0.5 0.4
+}
+Wall {
+  translation -8.43 1.03 -0.02
+  name "wall(11)"
+  size 0.05 0.5 0.4
+}
+Wall {
+  translation -0.02 1.03 0.69
+  name "wall(7)"
+  size 0.1 0.5 0.4
+}
+Wall {
+  translation 0.35 1.03 -1.53
+  rotation 0 1 0 -1.5707953071795862
+  name "wall(14)"
+  size 0.1 0.5 0.4
+}
+Wall {
+  translation -4.75 1.03 0.16
+  rotation 0 1 0 -1.5707953071795862
+  name "wall(8)"
+  size 0.05 0.5 7.3
+}
+Wall {
+  translation -4.75 1.03 -0.2
+  rotation 0 1 0 -1.5707953071795862
+  name "wall(9)"
+  size 0.05 0.5 7.3
+}
+Wall {
+  translation -4.75 1.55 0.18
+  rotation -0.577349935856137 -0.577349935856137 0.5773509358560258 2.09439
+  name "wall(10)"
+  size 0.05 0.4 7.3
 }
 TinkerbotsBase {
   translation -0.0014548922280546827 1.1896175846727004 0.12021830389717039
@@ -166,18 +226,68 @@ TinkerbotsBase {
       channel 1
     }
     Wall {
-      size 0.073 0.4 0.015
+      size 0.1 0.4 0.015
     }
   ]
 }
 ConveyorBelt {
-  translation -0.33 0.99 0.83
+  translation -0.33 0.97 0.46
   rotation 0 1 0 -1.5707953071795862
   name "plasty"
-  size 1.5 0.1 0.5
+  size 0.8 0.1 0.5
   borderThickness 0.0003
   borderHeight 0.0001
   speed 0.7
+}
+PlasticCrate {
+  translation -0.17 1.01 -1.63
+  size 0.6 0.2 0.6
+}
+PlasticCrate {
+  translation 2.36 1.01 -0.03
+  name "plastic crate(2)"
+  size 0.6 0.2 0.6
+}
+PlasticCrate {
+  translation -0.17 1.01 1.65
+  name "plastic crate(1)"
+  size 0.6 0.2 0.6
+}
+ConveyorBelt {
+  translation 0.17 0.98 -0.5
+  rotation 0 1 0 -1.5707953071795862
+  name "plasty(1)"
+  size 0.8 0.1 0.5
+  borderThickness 0.0003
+  borderHeight 0.0001
+  speed -0.7
+}
+ConveyorBelt {
+  translation 0.17 1.13896 -1.21005
+  rotation -0.2626120440378113 0.92847715569774 0.2626120440378113 -1.644935307179586
+  name "plasty(2)"
+  size 0.6 0.1 0.5
+  borderThickness 0.0003
+  borderHeight 0.0001
+  speed -1.5
+}
+ConveyorBelt {
+  translation 1.91392 1.151 -0.00927046
+  rotation -0.25881925031984915 0.9659257713012275 0 3.141592653589793
+  name "plasty(4)"
+  size 0.6 0.1 0.5
+  borderThickness 0.0003
+  borderHeight 0.0001
+  speed -2
+}
+ConveyorBelt {
+  translation -0.33 1.12713 1.1736
+  rotation -0.23835551062011623 0.9414749599300333 -0.23835173668712026 1.6310708978979238
+  name "plasty(3)"
+  size 0.6 0.1 0.5
+  borderThickness 0.0003
+  borderHeight 0.0001
+  speed -1.5
 }
 Wall {
   translation -0.72 1.01 0.22

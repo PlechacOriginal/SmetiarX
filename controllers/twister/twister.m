@@ -32,52 +32,54 @@ while wb_robot_step(TIME_STEP) ~= -1
 while wb_receiver_get_queue_length(receiver) > 0
         pointer = wb_receiver_get_data(receiver);
         setdatatype(pointer, 'doublePtr', 1, 1);
-        A = get(pointer, 'Value');
+        A = get(pointer, 'Value')
         wb_receiver_next_packet(receiver);
     end
   
-  disp(A)
+ 
   
-  value = wb_position_sensor_get_value(twister_pos)
+  angle = wb_position_sensor_get_value(twister_pos)
 
-    
+    if A == 0
+      wb_motor_set_velocity(rotational_motor, 0);
+    end
     if A == 1
-      if value < 0.732
-        wb_motor_set_velocity(rotational_motor, 1);
+      if angle < 0.732
+        wb_motor_set_velocity(rotational_motor, 2);
       
       
-      elseif value > 0.85
-        wb_motor_set_velocity(rotational_motor, -1);
+      elseif angle > 0.85
+        wb_motor_set_velocity(rotational_motor, -2);
       
       
-      elseif (value > 0.732) && (value < 0.85)
+      elseif (angle > 0.732) && (angle < 0.85)
         wb_motor_set_velocity(rotational_motor, 0);
       end
     
    elseif A == 2
-      if value < 1.932
-        wb_motor_set_velocity(rotational_motor, 1);
+      if angle < 2.3
+        wb_motor_set_velocity(rotational_motor, 2);
       
       
-      elseif value > 2
-        wb_motor_set_velocity(rotational_motor, -1);
+      elseif angle > 2.4
+        wb_motor_set_velocity(rotational_motor, -2);
       
       
-      elseif (value > 1.932) && (value < 2)
+      elseif (angle > 2.3) && (angle < 2.4)
         wb_motor_set_velocity(rotational_motor, 0);
       end
     
     
    elseif A == 3
-      if value < 0
-        wb_motor_set_velocity(rotational_motor, 1);
+      if angle < 0
+        wb_motor_set_velocity(rotational_motor, 2);
       
       
-      elseif value > 0.1
-        wb_motor_set_velocity(rotational_motor, -1);
+      elseif angle > 0.1
+        wb_motor_set_velocity(rotational_motor, -2);
       
       
-      elseif (value > 0) && (value < 0.1)
+      elseif (angle > 0) && (angle < 0.1)
         wb_motor_set_velocity(rotational_motor, 0);
       end
     end
