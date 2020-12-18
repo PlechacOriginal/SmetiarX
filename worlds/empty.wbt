@@ -3,8 +3,8 @@ WorldInfo {
   coordinateSystem "NUE"
 }
 Viewpoint {
-  orientation -0.03357548793178924 0.8885054755350594 0.45763599787861997 3.0114024732739426
-  position 1.5307856294638023 5.220657949081285 -3.5953614786814443
+  orientation -0.1167782400837476 -0.9239135681236814 -0.36434401501864966 2.565788496122867
+  position -2.0718506358856397 3.9230805675879616 -2.8356947758457354
 }
 TexturedBackground {
 }
@@ -21,6 +21,20 @@ UnevenTerrain {
     IBLStrength 100
   }
   perlinNOctaves -1
+}
+Wall {
+  translation -0.33 1.64 0.9
+  name "wall(13)"
+  size 0.7 0.1 1.5
+}
+Wall {
+  name "wall(6)"
+  size 0.7 0.1 1.5
+}
+Wall {
+  translation -0.64 1.01 0.89
+  name "wall(5)"
+  size 0.1 0.6 1.3
 }
 TinkerbotsBase {
   translation -0.72 1.53995456 -0.02
@@ -128,29 +142,14 @@ WaterBottle {
   mass 0.05
 }
 Wall {
-  translation -0.14 1.02 -0.49
+  translation -0.14 1.02 -0.87
   name "wall(4)"
-  size 0.1 0.1 0.7
+  size 0.1 0.6 1.2
 }
 Wall {
-  translation 0.47 1.02 -0.49
+  translation 0.5 1.03 -0.8
   name "wall(12)"
-  size 0.1 0.1 0.7
-}
-Wall {
-  translation -0.14 1.03 -1.08
-  name "wall(5)"
-  size 0.1 0.5 0.48
-}
-Wall {
-  translation 0.47 1.03 -1.15
-  name "wall(13)"
-  size 0.1 0.5 0.63
-}
-Wall {
-  translation -0.02 1.03 1.1
-  name "wall(6)"
-  size 0.1 0.5 0.4
+  size 0.1 0.6 1.4
 }
 Wall {
   translation -8.43 1.03 -0.02
@@ -158,15 +157,15 @@ Wall {
   size 0.05 0.5 0.4
 }
 Wall {
-  translation -0.02 1.03 0.69
+  translation -0.02 1.03 0.86
   name "wall(7)"
-  size 0.1 0.5 0.4
+  size 0.1 0.6 1.4
 }
 Wall {
-  translation 0.35 1.03 -1.53
+  translation 0.18 1.64 -0.89
   rotation 0 1 0 -1.5707953071795862
   name "wall(14)"
-  size 0.1 0.5 0.4
+  size 1.2 0.1 0.7
 }
 Wall {
   translation -4.75 1.03 0.16
@@ -240,7 +239,8 @@ ConveyorBelt {
   speed 0.7
 }
 PlasticCrate {
-  translation -0.17 1.01 -1.63
+  translation 0.175355 1.01 -1.66809
+  rotation 0 1 0 -0.785395307179586
   size 0.6 0.2 0.6
 }
 PlasticCrate {
@@ -249,7 +249,8 @@ PlasticCrate {
   size 0.6 0.2 0.6
 }
 PlasticCrate {
-  translation -0.17 1.01 1.65
+  translation -0.339704 1.01 1.73484
+  rotation 0 1 0 0.785398
   name "plastic crate(1)"
   size 0.6 0.2 0.6
 }
